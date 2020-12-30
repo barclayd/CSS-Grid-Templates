@@ -1,78 +1,72 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
     <title>Nested CSS Grids</title>
     <style>
-        body {
-            color: #fff;
-            font-family: 'Nunito Semibold';
-            text-align: center;
-        }
+      body {
+        color: #fff;
+        font-family: 'Nunito Semibold', sans-serif;
+        text-align: center;
+      }
 
-        #content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+      #content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
 
-        #content div {
-            background: #3bbced;
-            padding: 30px;
-        }
+      #content div {
+        background: #3bbced;
+        padding: 30px;
+      }
 
-        #content div:nth-child(even) {
-            background: rgb(2, 3, 97);
-            padding: 30px;
-        }
+      #content div:nth-child(even) {
+        background: rgb(2, 3, 97);
+        padding: 30px;
+      }
 
-        .nested {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column: span 2;
-            grid-gap: 10px;
-        }
+      .nested {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 2;
+        grid-gap: 10px;
+      }
 
-        .nested p {
-            border: 1px solid #fff;
-            padding: 20px;
-            margin: 0px;
-        }
+      .nested p {
+        border: 1px solid #fff;
+        padding: 20px;
+        margin: 0px;
+      }
 
-        .nested-nested {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column: span 3;
-            grid-gap: 10px;
-        }
+      .nested-nested {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 3;
+        grid-gap: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="content">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
 
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-
-        <div class="nested">
-            <div class="nested-nested">
-                <p>a</p>
-                <p>b</p>
-            </div>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
+      <div class="nested">
+        <div class="nested-nested">
+          <p>a</p>
+          <p>b</p>
         </div>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+      </div>
 
-        <div>5</div>
-        <div>6</div>
-
+      <div>5</div>
+      <div>6</div>
     </div>
-
-</body>
-
+  </body>
 </html>

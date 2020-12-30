@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+body {
+  background: rgb(19, 19, 19);
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-color: rgb(36, 243, 147);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.animated-grid {
+  height: 85vh;
+  display: grid;
+  margin-bottom: 200px;
+  gap: 1rem;
+  grid-template-areas:
+    'a  b  c  d'
+    'l  🌟 🌟 e'
+    'k  🌟 🌟 f'
+    'j  i  h  g';
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  --animation-delay: 100ms;
+}
+
+.card:first-child {
+  grid-area: a;
+  animation-delay: calc(var(--animation-delay) * 1);
+}
+.card:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(var(--animation-delay) * 2);
+}
+.card:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(var(--animation-delay) * 3);
+}
+.card:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(var(--animation-delay) * 4);
+}
+.card:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(var(--animation-delay) * 5);
+}
+.card:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(var(--animation-delay) * 6);
+}
+.card:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(var(--animation-delay) * 7);
+}
+.card:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(var(--animation-delay) * 8);
+}
+.card:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(var(--animation-delay) * 9);
+}
+.card:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(var(--animation-delay) * 10);
+}
+.card:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(var(--animation-delay) * 11);
+}
+.card:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(var(--animation-delay) * 12);
+}
+.card:last-child {
+  grid-area: 🌟;
+  animation-delay: calc(var(--animation-delay) * 13);
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0);
+  }
+}
